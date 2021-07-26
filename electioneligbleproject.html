@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        #para{
+            background-color: salmon;
+            width: 20%;
+
+        }
+        .form{
+            border: 3px solid;
+            border-radius: 25px;
+            width: 50%;
+            height: 500px;
+            position:relative;
+            left:20%;
+           
+           
+            
+        }
+        .box1{
+            position:absolute;
+            top: 60px;
+            left: 30%;
+            
+        }
+        .box2{
+            position:absolute;
+            top: 100px;
+            left: 30%;
+            
+        }
+        #btn{
+            position:absolute;
+            top: 150px;
+            left: 40%;
+            
+        }
+        #para{
+            position:absolute;
+            top: 180px;
+            left: 40%;
+            
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <h1>Eligble for Election candidates</h1>
+   <div class="form">
+    <form action="">
+       <div class="box1"> Name: <input type="text" id="name"></div><br>
+       <div class="box2"> Age : &nbsp;&nbsp;<input type="number" id="number"></div><br>
+
+    </form>
+
+    <button id=btn onclick="sam()">check</button>
+
+    <p id=para></p>
+
+</div>  
+
+    <script>
+        function sam(){
+        name=document.getElementById("name").value;
+        age=document.getElementById("number").value;
+        if (age > 18){
+            document.getElementById("para").innerHTML="hi "+name+" ! your age is "+age+" your eligble for vote";
+        }
+        else{
+            document.getElementById("para").innerHTML="hi "+name+" ! your age is "+age+" your Not eligble for vote";
+        }
+
+        
+    }
+
+    </script>
+</body>
+</html>
